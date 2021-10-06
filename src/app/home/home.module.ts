@@ -30,6 +30,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { TerminosCondicionesComponent } from './transfer-external/terminos-condiciones/terminos-condiciones.component';
 import {IMaskDirectiveModule, IMaskModule} from "angular-imask";
 import {DialogErrorExtComponent} from "./transfer-external/dialog-error-ext/dialog-error-ext.component";
+import { ActTokenComponent } from './act-token/act-token.component';
+import {MatListModule} from "@angular/material/list";
 
 
 
@@ -47,29 +49,31 @@ import {DialogErrorExtComponent} from "./transfer-external/dialog-error-ext/dial
     DialogErrorComponent,
     DialogErrorExtComponent,
     TerminosCondicionesComponent,
+    ActTokenComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatIconModule,
-    MatMenuModule,
-    MatCardModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    NgxMaskModule.forRoot(),
-    MatRippleModule,
-    MatStepperModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    ReactiveFormsModule,
-    MatTooltipModule,
-    IMaskModule
-  ],exports:[
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        MatIconModule,
+        MatMenuModule,
+        MatCardModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        FormsModule,
+        NgxMaskModule.forRoot(),
+        MatRippleModule,
+        MatStepperModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatRadioModule,
+        MatCheckboxModule,
+        ReactiveFormsModule,
+        MatTooltipModule,
+        IMaskModule,
+        MatListModule
+    ],exports:[
 
   ],
   providers: [

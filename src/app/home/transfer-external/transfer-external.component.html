@@ -131,15 +131,19 @@
                 <div class="flex space-x-2 justify-between items-center">
                   <mat-form-field class="monset w-[30%] lg:w-[6.5rem]" appearance="outline">
                     <mat-select [(value)]="selected">
-                      <mat-option value="8">DNI</mat-option>
-                      <mat-option value="11">CE</mat-option>
-                      <mat-option value="11">RUC</mat-option>
-                      <mat-option value="11">Pasaporte</mat-option>
+                      <mat-option *ngFor="let select of docTypes" [value]="select.maxLength">
+                        {{select.label}}
+                      </mat-option>
+<!--                      <mat-option value="dni">DNI</mat-option>-->
+<!--                      <mat-option value="ce">CE</mat-option>-->
+<!--                      <mat-option value="ruc">RUC</mat-option>-->
+<!--                      <mat-option value="pasaporte">Pasaporte</mat-option>-->
                     </mat-select>
                   </mat-form-field>
+                  <span></span>
                   <mat-form-field class="w-[70%] lg:w-[14rem] monset" appearance="outline">
                     <mat-label>Ingresa el número de documento</mat-label>
-                    <input matInput autocomplete="off" maxlength="{{selected}}" minlength="{{selected}}"
+                    <input matInput autocomplete="off" maxLength="{{selected}}" minlength="{{selected}}"
                       formControlName="selecDNIinput" (keypress)="onKeyPress($event)"
                       placeholder="Ingresa el número de documento">
                     <mat-error *ngIf="selecDNIinput.hasError('required')">
@@ -159,10 +163,10 @@
               </div>
 
               <div *ngIf="variable === 'B'">
-                <label *ngIf="selected !== 'RUC'" class="block monsetb mt-2 text-[#8F8F8F] text-[1rem] mb-2">
+                <label  class="block monsetb mt-2 text-[#8F8F8F] text-[1rem] mb-2">
                   Nombres y Apellidos
                 </label>
-                <label *ngIf="selected === 'RUC'" class="block monsetb mt-2 text-[#8F8F8F] text-[1rem] mb-2">
+                <label class="block monsetb mt-2 text-[#8F8F8F] text-[1rem] mb-2">
                   Razon Social
                 </label>
                 <mat-form-field appearance="outline" class="w-full monset">
