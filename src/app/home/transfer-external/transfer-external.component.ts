@@ -51,6 +51,9 @@ export class TransferExternalComponent implements OnInit {
     padFractionalZeros: true // if true, then pads zeros at end to the length of scale
   };
 
+  length = 0;
+  tipo = '';
+
   currencyMask = {
     mask: [
       {
@@ -145,11 +148,21 @@ export class TransferExternalComponent implements OnInit {
   ]
 
   docTypes = [
-    { value: 'dni', label: 'DNI', maxLength: 8 },
-    { value: 'ce', label: 'CE', maxLength: 11 },
-    { value: 'ruc', label: 'RUC', maxLength: 11 },
-    { value: 'pasaporte', label: 'PASAPORTE', maxLength: 11 }
+    { id: 1, value: 'dni', label: 'DNI', maxLength: 8 },
+    { id: 2, value: 'ce', label: 'CE', maxLength: 11 },
+    { id: 3, value: 'ruc', label: 'RUC', maxLength: 11 },
+    { id: 4, value: 'pasaporte', label: 'PASAPORTE', maxLength: 11 }
   ]
+
+  seleccionado(e: any){
+    console.log(e);
+
+    this.length = e.maxLength;
+    this.tipo = e.value;
+  }
+  compareFn(option: any, value: any): boolean {
+    return option.id === value.id;
+  }
 
   public redirectTransfer(){
     this.router.navigateByUrl('/home/transferencias')
