@@ -145,7 +145,7 @@
                     <mat-label>Ingresa el número de documento</mat-label>
                     <input matInput autocomplete="off" [maxLength]="length"
                       formControlName="selecDNIinput" (keypress)="onKeyPress($event)"
-                      placeholder="Ingresa el número de documento">
+                      placeholder="Ingrese numero de {{placeholderdoc}}">
                     <mat-error *ngIf="selecDNIinput.hasError('required')">
                       El número de documento es requerido
                     </mat-error>

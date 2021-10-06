@@ -52,7 +52,8 @@ export class TransferExternalComponent implements OnInit {
   };
 
   length = 0;
-  tipo = '';
+  tipo = 'dni';
+  placeholderdoc= ''
 
   currencyMask = {
     mask: [
@@ -159,6 +160,7 @@ export class TransferExternalComponent implements OnInit {
 
     this.length = e.maxLength;
     this.tipo = e.value;
+    this.placeholderdoc = e.label;
   }
   compareFn(option: any, value: any): boolean {
     return option.id === value.id;
