@@ -172,8 +172,10 @@
 <!--                </label>-->
                 <mat-form-field appearance="outline" class="w-full monset">
                   <mat-label>Ingresa los nombres y apellidos</mat-label>
-                  <input matInput formControlName="dataper" maxlength="100" autocomplete="off"
+                  <input *ngIf="tipo !== 'ruc'" matInput formControlName="dataper" maxlength="100" autocomplete="off"
                     placeholder="Ingresa los nombres y apellidos">
+                  <input *ngIf="tipo === 'ruc'" matInput formControlName="dataper" maxlength="100" autocomplete="off"
+                         placeholder="Ingrese la razon social">
                   <mat-error *ngIf="selecDNIinput.hasError('required')">
                     Los nombres y apellidos son requeridos
                   </mat-error>
