@@ -7,6 +7,10 @@
   background-color: #00AF91!important;
 }
 
+:host::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
+}
+
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
   background-color: #00AF91;
 }
@@ -26,4 +30,10 @@
   width: 19.125rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+:host .mat-button-disabled.mat-button-disabled{
+  background: #BBEEE5;
+  //opacity: 0.2;
+  color: white;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-act-token',
@@ -7,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActTokenComponent implements OnInit {
 
-  checked!: boolean;
+  groupForm1!: FormGroup;
+  checked = new FormControl('', Validators.required);
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.groupForm1 = new FormGroup({
+      check: this.checked,
+    })
+  }
+
+  public redirectConfig(){
+    this.router.navigateByUrl('/home/configuracion')
   }
 
 }

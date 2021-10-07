@@ -8,8 +8,8 @@
               <div class="mr-3 lg:pb-3 monsetb lg:text-xl text-[0.775rem] text-center mt-4  lg:px-14">Token Digital</div>
             </div>
             <mat-stepper labelPosition="bottom" linear #stepper>
-              <mat-step state="done">
-                <form>
+              <mat-step editable="false" state="done">
+                <form [formGroup]="groupForm1">
                   <ng-template matStepLabel>Paso 1</ng-template>
                   <div class="flex justify-center mt-10">
                     <div class="w-[25.188rem] container h-[25.875rem] mr-14 flex justify-center px-6 py-4 bg-[#E8F5FF]" style="border-radius: 44px;">
@@ -22,12 +22,14 @@
                     </div>
                   </div>
                   <div class="mt-16">
-                    <mat-checkbox class="example-margin monset text-[1rem]">He leído y acepto los <a class="font-semibold monsetb text-[#00AF91]">términos y condiciones</a> de uso del Token Digital.</mat-checkbox>
+                    <mat-checkbox formControlName="check" class="example-margin monset text-[1rem]">He leído y acepto los <a class="font-semibold monsetb text-[#00AF91]">términos y condiciones</a> de uso del Token Digital.</mat-checkbox>
                   </div>
                 </form>
-                <div class="mt-6 text-white w-full flex justify-center"><button matStepperNext style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Siguiente</button></div>
+                <div class="mt-6 text-white w-full flex justify-center">
+                  <button matStepperNext [disabled]="groupForm1.invalid" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Siguiente</button>
+                </div>
               </mat-step>
-              <mat-step state="done">
+              <mat-step editable="false" state="done">
                 <form>
                   <ng-template matStepLabel>Paso 2</ng-template>
                   <div class="flex justify-end mt-10">
@@ -42,9 +44,12 @@
                 <div class="mt-10">
                   <!--                    <mat-checkbox class="example-margin monset text-[1rem]">He leído y acepto los <a class="font-semibold monsetb text-[#00AF91]">términos y condiciones</a> de uso del Token Digital.</mat-checkbox>-->
                 </div>
-                <div class="mt-6 text-white w-full flex justify-center"><button matStepperNext style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Siguiente</button></div>
+                <div class="mt-6 text-white space-x-4 w-full flex justify-center flex">
+                  <button matStepperPrevious style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-white text-[#1A3184] monsetb w-[15.688rem] h-[3.75rem]">Volver</button>
+                  <button matStepperNext style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Siguiente</button>
+                </div>
               </mat-step>
-              <mat-step state="done">
+              <mat-step editable="false" state="done">
                 <form>
                   <ng-template matStepLabel>Paso 3</ng-template>
                   <div class="flex justify-center mt-10">
@@ -60,7 +65,9 @@
                 <div class="mt-10">
                   <!--                    <mat-checkbox class="example-margin monset text-[1rem]">He leído y acepto los <a class="font-semibold monsetb text-[#00AF91]">términos y condiciones</a> de uso del Token Digital.</mat-checkbox>-->
                 </div>
-                <div class="mt-6 text-white w-full flex justify-center"><button matStepperNext style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Siguiente</button></div>
+                <div class="mt-6 text-white w-full flex justify-center">
+                  <button style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" (click)="redirectConfig()" class="bg-[#00AF91] monsetb w-[15.688rem] h-[3.75rem]">Finalizar</button>
+                </div>
               </mat-step>
               <ng-template matStepperIcon="done" let-index="index">
                 {{index + 1}}
