@@ -20,3 +20,10 @@
     right: 17rem;
   }
 }
+
+
+::ng-deep.mat-horizontal-stepper-header-container{
+  width: 19.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
