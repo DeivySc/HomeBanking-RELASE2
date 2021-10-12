@@ -9,6 +9,7 @@ import {TransferInternalComponent} from "./transfer-internal/transfer-internal.c
 import {TransferExternalComponent} from "./transfer-external/transfer-external.component";
 import {TransferTercerosComponent} from "./transfer-terceros/transfer-terceros.component";
 import {ActTokenComponent} from "./act-token/act-token.component";
+import {PerfilDashboardComponent} from "./perfil-dashboard/perfil-dashboard.component";
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path: 'transferencias/1', component: TransferInternalComponent},
       {path: 'transferencias/2', component: TransferExternalComponent},
       {path: 'transferencias/3', component: TransferTercerosComponent},
-      {path: 'Activar-Token', component: ActTokenComponent}
+      {path: 'Activar-Token', component: ActTokenComponent},
+      {path: 'perfil', component: PerfilDashboardComponent}
     ]
   }
 ]

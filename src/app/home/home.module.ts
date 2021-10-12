@@ -32,6 +32,9 @@ import {IMaskDirectiveModule, IMaskModule} from "angular-imask";
 import {DialogErrorExtComponent} from "./transfer-external/dialog-error-ext/dialog-error-ext.component";
 import { ActTokenComponent } from './act-token/act-token.component';
 import {MatListModule} from "@angular/material/list";
+import { PerfilDashboardComponent } from './perfil-dashboard/perfil-dashboard.component';
+import { AdvertenciaComponent } from './perfil-dashboard/advertencia/advertencia.component';
+import { DialogPerfilComponent } from './perfil-dashboard/dialog-perfil/dialog-perfil.component';
 
 
 
@@ -50,6 +53,9 @@ import {MatListModule} from "@angular/material/list";
     DialogErrorExtComponent,
     TerminosCondicionesComponent,
     ActTokenComponent,
+    PerfilDashboardComponent,
+    AdvertenciaComponent,
+    DialogPerfilComponent,
   ],
     imports: [
         CommonModule,
