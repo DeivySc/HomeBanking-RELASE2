@@ -43,6 +43,12 @@
           Registra un correo electrónico en nuestras oficinas a nivel nacional para enviarte todas las comunicaciones tales como: Estado de cuenta, constancias, etc.
         </p>
         <p *ngIf="userEmail !== ''" class="monset text-sm mb-4">Todas las comunicaciones serán enviadas automaticamente a tu correo registrado:</p>
+        <div  class="flex items-center pr-3" *ngIf="userEmail !== ''">
+          <mat-icon aria-hidden="false" class="text-[#00AF91] mr-2">email</mat-icon>
+          <span class="monset text-[0.85rem] lg:text-[1rem]">
+                {{ userEmail }}
+              </span>
+        </div>
         <div class="mt-auto">
           <button (click)="openDialog()"
             *ngIf="userEmail === ''"
@@ -53,21 +59,27 @@
             <mat-icon aria-hidden="false" class="text-[#00AF91] mr-1">email</mat-icon>
             Registrar correo
           </button>
-          <div *ngIf="userEmail !== ''" class="flex items-center justify-between">
-            <div class="flex items-center pr-3">
-              <mat-icon aria-hidden="false" class="text-v1 mr-2">email</mat-icon>
-              <span class="monset">
-                {{ userEmail }}
-              </span>
-            </div>
-            <button
-              mat-button
-              color="white"
-              class="text-black monsetb">
-              Editar
-              <mat-icon aria-hidden="false" class="ml-1">edit</mat-icon>
-            </button>
-          </div>
+          <button (click)="openDialog()" *ngIf="userEmail !== ''"
+                  mat-button mat-raised-button
+                  color="white" class="text-black monsetb">
+            <mat-icon aria-hidden="false" class="text-[#00AF91] mr-1">edit</mat-icon>
+            Editar correo
+          </button>
+<!--          <div *ngIf="userEmail !== ''" class="flex items-center justify-between">-->
+<!--            <div class="flex items-center pr-3">-->
+<!--              <mat-icon aria-hidden="false" class="text-v1 mr-2">email</mat-icon>-->
+<!--              <span class="monset">-->
+<!--                {{ userEmail }}-->
+<!--              </span>-->
+<!--            </div>-->
+<!--            <button-->
+<!--              mat-button (click)="openDialog()"-->
+<!--              color="white"-->
+<!--              class="text-black monsetb">-->
+<!--              Editar-->
+<!--              <mat-icon aria-hidden="false" class="ml-1">edit</mat-icon>-->
+<!--            </button>-->
+<!--          </div>-->
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
 .btn{
-  width: 138px;
-  height: 40px;
   /* Blank */
   background: #FFFFFF;
   /* boton 1 */
@@ -11,4 +9,8 @@
 .centrado{
   margin-left: 0px;
   margin-right: 0px;
+}
+
+:host::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
 }

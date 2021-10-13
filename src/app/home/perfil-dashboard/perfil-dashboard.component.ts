@@ -22,10 +22,15 @@ export class PerfilDashboardComponent implements OnInit {
       });
       this.advertencia = false;
     }else{
-      this.dialog.open(DialogPerfilComponent, {
+      const dialogRef = this.dialog.open(DialogPerfilComponent, {
         width: '399px',
         height: '394px',
       });
+
+      dialogRef.afterClosed().subscribe(result => {
+        this.userEmail = result;
+        console.log(this.userEmail)
+      })
     }
 
   }
