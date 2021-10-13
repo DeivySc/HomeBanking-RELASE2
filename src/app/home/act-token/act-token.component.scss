@@ -28,6 +28,17 @@ $duration: .6s;
 }
 
 
+@media (max-width: 1920px){
+  .maxscreenimg2 {
+    left: 32rem;
+  }
+
+  .maxscreenimg1 {
+    right: 28rem;
+  }
+}
+
+
 ::ng-deep.mat-horizontal-stepper-header-container{
   width: 19.125rem;
   margin-left: auto;
