@@ -1,3 +1,5 @@
+$duration: .6s;
+
 .example-margin {
   margin: 0 10px;
 }
@@ -36,4 +38,40 @@
   background: #BBEEE5;
   //opacity: 0.2;
   color: white;
+}
+
+// Animaciones
+
+@keyframes textanimation {
+  from{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.textanimation{
+  animation-name: textanimation;
+  animation-duration: 3s;
+  //animation-fill-mode: both;
+}
+
+@keyframes imganimation {
+  from{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.imganimation{
+  animation-name: imganimation;
+  animation-duration: 3s;
+  //animation-fill-mode: both;
 }
