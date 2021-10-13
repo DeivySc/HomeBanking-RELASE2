@@ -28,13 +28,13 @@ $duration: .6s;
 }
 
 
-@media (max-width: 1920px){
+@media (min-width: 1720px){
   .maxscreenimg2 {
-    left: 32rem;
+    left: 26rem;
   }
 
   .maxscreenimg1 {
-    right: 28rem;
+    right: 22rem;
   }
 }
 
