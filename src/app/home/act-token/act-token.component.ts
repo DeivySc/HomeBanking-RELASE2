@@ -25,10 +25,22 @@ import {trigger, state, style, animate, transition} from "@angular/animations";
 })
 export class ActTokenComponent implements OnInit {
 
+  qrActive = false;
+  qrAutenticacion = false;
+  qrScan = true;
+
   groupForm1!: FormGroup;
   checked = new FormControl('', Validators.required);
 
   constructor(private router: Router) { }
+
+  clickFinalizar(){
+    if (!this.qrAutenticacion){
+      this.qrScan = false;
+      this.qrAutenticacion = false;
+      this.qrActive = true;
+    }
+  }
 
   ngOnInit(): void {
     this.groupForm1 = new FormGroup({

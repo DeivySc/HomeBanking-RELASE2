@@ -38,6 +38,9 @@ $duration: .6s;
   }
 }
 
+.ph-center::-webkit-input-placeholder {
+  text-align: center;
+}
 
 ::ng-deep.mat-horizontal-stepper-header-container{
   width: 19.125rem;
@@ -85,4 +88,8 @@ $duration: .6s;
   animation-name: imganimation;
   animation-duration: 3s;
   //animation-fill-mode: both;
+}
+
+hr.solid {
+  border-top: 1px solid #1A3184;
 }
