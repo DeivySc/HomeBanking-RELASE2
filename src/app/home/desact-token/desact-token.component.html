@@ -1,19 +1,19 @@
 <div>
-  <div class="flex justify-center mt-10">
+  <div class="flex justify-center px-2 mt-10">
     <div *ngIf="warning === true">
-      <div class="w-[25.188rem] h-[25.875rem] flex justify-center px-6 py-4 bg-[#E8F5FF]" style="border-radius: 44px;">
+      <div class="w-full lg:w-[25.188rem] lg:h-[25.875rem] flex justify-center px-2 lg:px-6 lg:py-4 bg-[#E8F5FF]" style="border-radius: 20px;">
         <div  class="text-center py-4">
-          <div class="mb-4">
+          <div class="lg:mb-4">
             <mat-icon class="text-[#00AF91] text-[4rem]">vpn_key</mat-icon>
           </div>
-          <div style="line-height: 29px;" class="text-[1.5rem] mb-4 text-[#1A3184] monsetb">
+          <div  class="text-[1rem] lg:leading-7 px-6 tracking-[0.0015em] lg:tracking-[0em] lg:text-[1.5rem] mb-4 text-[#1A3184] monsetb">
             Tu Token Digital se encuentra activado
           </div>
-          <p class="text-[1rem] monset">Información del dispositivo asociado al Token Digital:</p>
+          <p class="text-[0.875rem] lg:text-[1rem] monset">Información del dispositivo asociado al Token Digital:</p>
           <hr class="solid mt-6">
-          <div class="mt-6 px-4 flex space-x-4">
+          <div class="mt-6 px-2 lg:px-4 flex space-x-2 lg:space-x-4">
             <div><img class="w-[2.25rem] h-[2.5rem]" src="assets/images/android.svg"></div>
-            <div style="line-height: 17px;letter-spacing: 0.0025em;" class="text-left text-[#1A3184] monset">
+            <div style="line-height: 17px;letter-spacing: 0.0025em;" class="text-left text-[0.75rem] lg:text-[0.875rem] text-[#1A3184] monset">
               <div>Android</div>
               <div>ID: Id del equipo</div>
               <div>Fecha de activación: DD/MM/YYYY</div>
@@ -22,32 +22,57 @@
         </div>
       </div>
 
-      <div class="w-[25.188rem] mb-6 mt-6 px-6 py-4 bg-[#E8F5FF]" style="border-radius: 12px;">
+      <div class="w-full lg:w-[25.188rem] mb-6 mt-6 px-2 lg:px-6 py-4 bg-[#E8F5FF]" style="border-radius: 12px;">
         <div class="flex justify-center space-x-4 text-[#F34E4E]">
-          <div><mat-icon class="text-[2rem]">warning</mat-icon></div>
-          <div><p>Luego que se desactive el dispositivo, se cerrará tu sesión y no podrás utilizar tu Token Digital hasta que lo actives en el nuevo dispositivo.</p></div>
+          <div><mat-icon class="text-[1.5rem] lg:text-[2rem]">warning</mat-icon></div>
+          <div><p class="text-[0.625rem] lg:text-[0.75rem]">Luego que se desactive el dispositivo, se cerrará tu sesión y no podrás utilizar tu Token Digital hasta que lo actives en el nuevo dispositivo.</p></div>
         </div>
         <div class="flex justify-center mt-4">
-          <button (click)="clickDesToken()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[3.75rem]" mat-button>Desactivar dispositivo</button>
+          <button (click)="clickDesToken()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Desactivar dispositivo</button>
         </div>
       </div>
     </div>
 
-    <div *ngIf="warning === false" class="flex justify-center">
+    <div *ngIf="next1 === true" class="flex justify-center">
       <div>
         <div class="text-[1.5rem] text-center monsetb">Token Digital</div>
-        <div style="border-radius: 12px;" class="bg-[#ECFEFB] mt-4 w-[26.375rem] px-14 py-4">
-          <p class="text-[1rem] monset text-center">Por mecanismos de seguridad, para proceder con la desactivación de tu dispositivo debes ingresar tu clave de cajero de 4 dígitos.</p>
-          <p class="text-[0.688rem] monsetb text-center px-14">Recuerda que no debes compartir tus claves con nadie!</p>
+        <div style="border-radius: 12px;" class="bg-[#ECFEFB] mt-4 w-full lg:w-[26.375rem] px-6 lg:px-14 py-4">
+          <p class="text-[0.75rem] lg:text-[1rem] monset text-center">Por mecanismos de seguridad, para proceder con la desactivación de tu dispositivo debes ingresar tu clave de cajero de 4 dígitos.</p>
+          <p class="text-[0.688rem] monsetb text-center px-4 lg:px-14">Recuerda que no debes compartir tus claves con nadie!</p>
         </div>
         <div class="mt-6 p-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); border-radius: 12px;">
           <p class="monset text-[0.75rem] inline-flex">
             <mat-icon class="text-[#F9B208]">info</mat-icon>Clave de cajero de 4 digitos
           </p>
+          <app-password></app-password>
         </div>
-        <div class="flex justify-center mt-10">
-          <button (click)="clickDesToken()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[3.75rem]" mat-button>Desactivar dispositivo</button>
+        <div class="flex justify-center mt-10 mb-6">
+          <button (click)="clickNext1()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Desactivar dispositivo</button>
         </div>
+      </div>
+    </div>
+
+    <div *ngIf="next2 === true">
+      <div class="w-full lg:w-[25.188rem] lg:h-[25.875rem] flex justify-center px-2 lg:px-6 lg:py-4 bg-[#E8F5FF]" style="border-radius: 20px;">
+        <div  class="text-center py-4">
+          <div class="flex flex-wrap content-center justify-center">
+            <div class="lg:mb-4">
+              <mat-icon class="text-[#00AF91] lg:text-[2.5rem]">phonelink_erase</mat-icon>
+            </div>
+            <div class="flex flex-wrap content-center mt-14">
+              <div  class="text-[1rem] lg:leading-7 px-6 tracking-[0.0015em] lg:tracking-[0em] lg:text-[1.5rem] mb-4 text-[#1A3184] monsetb">
+                Tu dispositivo fue desactivado.
+              </div>
+              <p class="text-[0.875rem] px-6 lg:px-4 lg:text-[1rem] monset">
+                No puedes utilizar tu Token Digital hasta activarlo en el nuevo dispositivo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between mt-20">
+        <button class="text-[#1A3184] btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Ir al inicio</button>
+        <button class="bg-[#00AF91] text-white btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Activar Token</button>
       </div>
     </div>
   </div>

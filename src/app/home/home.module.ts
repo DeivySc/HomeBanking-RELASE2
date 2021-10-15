@@ -38,6 +38,7 @@ import { AdvertenciaComponent } from './perfil-dashboard/advertencia/advertencia
 import { DialogPerfilComponent } from './perfil-dashboard/dialog-perfil/dialog-perfil.component';
 import { DesactTokenComponent } from './desact-token/desact-token.component';
 import { DialogWarningComponent } from './desact-token/dialog-warning/dialog-warning.component';
+import {PasswordComponent} from "../components/password/password.component";
 
 
 
@@ -61,6 +62,7 @@ import { DialogWarningComponent } from './desact-token/dialog-warning/dialog-war
     DialogPerfilComponent,
     DesactTokenComponent,
     DialogWarningComponent,
+    PasswordComponent
   ],
     imports: [
         CommonModule,
@@ -86,7 +88,7 @@ import { DialogWarningComponent } from './desact-token/dialog-warning/dialog-war
         MatListModule,
         MatProgressSpinnerModule
     ],exports:[
-
+      PasswordComponent
   ],
   providers: [
     CurrencyPipe

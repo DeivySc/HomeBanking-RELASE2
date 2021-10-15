@@ -35,7 +35,6 @@ import { PasswordComponent } from './components/password/password.component';
         ConfigurationComponent,
         MenuComponent,
         ToolbarComponent,
-        PasswordComponent,
     ],
     imports: [
         BrowserModule,
@@ -63,7 +62,6 @@ import { PasswordComponent } from './components/password/password.component';
     providers: [CurrencyPipe],
   exports: [
     ToolbarComponent,
-    PasswordComponent
   ],
     bootstrap: [AppComponent]
 })
