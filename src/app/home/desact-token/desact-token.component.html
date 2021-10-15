@@ -53,7 +53,7 @@
     </div>
 
     <div *ngIf="next2 === true">
-      <div class="w-full lg:w-[25.188rem] lg:h-[25.875rem] flex justify-center px-2 lg:px-6 lg:py-4 bg-[#E8F5FF]" style="border-radius: 20px;">
+      <div class="w-full lg:w-[25.188rem] mx-auto lg:h-[25.875rem] flex justify-center px-2 lg:px-6 lg:py-4 bg-[#E8F5FF]" style="border-radius: 20px;">
         <div  class="text-center py-4">
           <div class="flex flex-wrap content-center justify-center">
             <div class="lg:mb-4">
@@ -70,9 +70,9 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-between mt-20">
-        <button class="text-[#1A3184] btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Ir al inicio</button>
-        <button class="bg-[#00AF91] text-white btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Activar Token</button>
+      <div class="flex px-2 justify-center mb-6 lg:space-x-4 mt-20">
+        <button (click)="redirectInicio" class="text-[#1A3184] btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Ir al inicio</button>
+        <button (click)="redirectActToken" class="bg-[#00AF91] text-white btn w-[8.75rem] lg:w-[15.688rem] h-[2.5rem] lg:h-[3.75rem]" mat-button>Activar Token</button>
       </div>
     </div>
   </div>

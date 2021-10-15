@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DialogWarningComponent} from "./dialog-warning/dialog-warning.component";
 import {MatDialog} from "@angular/material/dialog";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-desact-token',
@@ -14,7 +15,7 @@ export class DesactTokenComponent implements OnInit {
   next2 = false
 
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private router: Router) { }
 
   clickNext1(){
     this.warning = false
@@ -39,6 +40,15 @@ export class DesactTokenComponent implements OnInit {
         this.next2 = false;
       })
     }
+  }
+
+  public redirectActToken(){
+    this.router.navigateByUrl('/home/Activar-Token');
+    console.log('realizado')
+  }
+
+  public redirectInicio(){
+    this.router.navigateByUrl('/home/configuracion');
   }
 
   ngOnInit(): void {
