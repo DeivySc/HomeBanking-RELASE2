@@ -25,6 +25,12 @@ import {trigger, state, style, animate, transition} from "@angular/animations";
 })
 export class ActTokenComponent implements OnInit {
 
+  spinner!: boolean;
+
+  showSpinner() {
+    this.spinner = true;
+  }
+
   qrActive = false;
   qrAutenticacion = false;
   qrScan = true;
