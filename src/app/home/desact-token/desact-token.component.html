@@ -1,0 +1,54 @@
+<div>
+  <div class="flex justify-center mt-10">
+    <div *ngIf="warning === true">
+      <div class="w-[25.188rem] h-[25.875rem] flex justify-center px-6 py-4 bg-[#E8F5FF]" style="border-radius: 44px;">
+        <div  class="text-center py-4">
+          <div class="mb-4">
+            <mat-icon class="text-[#00AF91] text-[4rem]">vpn_key</mat-icon>
+          </div>
+          <div style="line-height: 29px;" class="text-[1.5rem] mb-4 text-[#1A3184] monsetb">
+            Tu Token Digital se encuentra activado
+          </div>
+          <p class="text-[1rem] monset">Información del dispositivo asociado al Token Digital:</p>
+          <hr class="solid mt-6">
+          <div class="mt-6 px-4 flex space-x-4">
+            <div><img class="w-[2.25rem] h-[2.5rem]" src="assets/images/android.svg"></div>
+            <div style="line-height: 17px;letter-spacing: 0.0025em;" class="text-left text-[#1A3184] monset">
+              <div>Android</div>
+              <div>ID: Id del equipo</div>
+              <div>Fecha de activación: DD/MM/YYYY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[25.188rem] mb-6 mt-6 px-6 py-4 bg-[#E8F5FF]" style="border-radius: 12px;">
+        <div class="flex justify-center space-x-4 text-[#F34E4E]">
+          <div><mat-icon class="text-[2rem]">warning</mat-icon></div>
+          <div><p>Luego que se desactive el dispositivo, se cerrará tu sesión y no podrás utilizar tu Token Digital hasta que lo actives en el nuevo dispositivo.</p></div>
+        </div>
+        <div class="flex justify-center mt-4">
+          <button (click)="clickDesToken()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[3.75rem]" mat-button>Desactivar dispositivo</button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="warning === false" class="flex justify-center">
+      <div>
+        <div class="text-[1.5rem] text-center monsetb">Token Digital</div>
+        <div style="border-radius: 12px;" class="bg-[#ECFEFB] mt-4 w-[26.375rem] px-14 py-4">
+          <p class="text-[1rem] monset text-center">Por mecanismos de seguridad, para proceder con la desactivación de tu dispositivo debes ingresar tu clave de cajero de 4 dígitos.</p>
+          <p class="text-[0.688rem] monsetb text-center px-14">Recuerda que no debes compartir tus claves con nadie!</p>
+        </div>
+        <div class="mt-6 p-4" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); border-radius: 12px;">
+          <p class="monset text-[0.75rem] inline-flex">
+            <mat-icon class="text-[#F9B208]">info</mat-icon>Clave de cajero de 4 digitos
+          </p>
+        </div>
+        <div class="flex justify-center mt-10">
+          <button (click)="clickDesToken()" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24); border-radius: 20px;" class="bg-[#00AF91] monsetb text-white w-[15.688rem] h-[3.75rem]" mat-button>Desactivar dispositivo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

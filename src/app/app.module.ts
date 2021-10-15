@@ -21,9 +21,10 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {CurrencyPipe} from "@angular/common";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
 import {IMaskModule} from "angular-imask";
+import { PasswordComponent } from './components/password/password.component';
 
 
 
@@ -34,6 +35,7 @@ import {IMaskModule} from "angular-imask";
         ConfigurationComponent,
         MenuComponent,
         ToolbarComponent,
+        PasswordComponent,
     ],
     imports: [
         BrowserModule,
@@ -55,12 +57,14 @@ import {IMaskModule} from "angular-imask";
         MatDialogModule,
         IMaskModule,
 
-      BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     providers: [CurrencyPipe],
-    exports: [
-        ToolbarComponent
-    ],
+  exports: [
+    ToolbarComponent,
+    PasswordComponent
+  ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -29,6 +29,14 @@ export class ActTokenComponent implements OnInit {
 
   showSpinner() {
     this.spinner = true;
+    if (this.spinner){
+      setTimeout(() => {
+        this.spinner = false;
+        this.qrScan = false;
+        this.qrAutenticacion = true;
+        this.qrActive = false;
+      }, 5000);
+    }
   }
 
   qrActive = false;
@@ -41,11 +49,9 @@ export class ActTokenComponent implements OnInit {
   constructor(private router: Router) { }
 
   clickFinalizar(){
-    if (!this.qrAutenticacion){
-      this.qrScan = false;
-      this.qrAutenticacion = false;
-      this.qrActive = true;
-    }
+    this.qrScan = false;
+    this.qrAutenticacion = false;
+    this.qrActive = true
   }
 
   ngOnInit(): void {

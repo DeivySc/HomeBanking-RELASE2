@@ -36,6 +36,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PerfilDashboardComponent } from './perfil-dashboard/perfil-dashboard.component';
 import { AdvertenciaComponent } from './perfil-dashboard/advertencia/advertencia.component';
 import { DialogPerfilComponent } from './perfil-dashboard/dialog-perfil/dialog-perfil.component';
+import { DesactTokenComponent } from './desact-token/desact-token.component';
+import { DialogWarningComponent } from './desact-token/dialog-warning/dialog-warning.component';
 
 
 
@@ -57,6 +59,8 @@ import { DialogPerfilComponent } from './perfil-dashboard/dialog-perfil/dialog-p
     PerfilDashboardComponent,
     AdvertenciaComponent,
     DialogPerfilComponent,
+    DesactTokenComponent,
+    DialogWarningComponent,
   ],
     imports: [
         CommonModule,

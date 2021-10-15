@@ -10,6 +10,7 @@ import {TransferExternalComponent} from "./transfer-external/transfer-external.c
 import {TransferTercerosComponent} from "./transfer-terceros/transfer-terceros.component";
 import {ActTokenComponent} from "./act-token/act-token.component";
 import {PerfilDashboardComponent} from "./perfil-dashboard/perfil-dashboard.component";
+import {DesactTokenComponent} from "./desact-token/desact-token.component";
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
       {path: 'transferencias/2', component: TransferExternalComponent},
       {path: 'transferencias/3', component: TransferTercerosComponent},
       {path: 'Activar-Token', component: ActTokenComponent},
-      {path: 'perfil', component: PerfilDashboardComponent}
+      {path: 'perfil', component: PerfilDashboardComponent},
+      {path: 'Desactivar-Token', component: DesactTokenComponent},
     ]
   }
 ]

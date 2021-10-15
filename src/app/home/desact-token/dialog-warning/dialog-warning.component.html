@@ -1,0 +1,12 @@
+<div style="text-align: center" class="w-full">
+  <mat-icon class="text-[2rem] text-[#F34E4E]">warning</mat-icon>
+</div>
+<div class="text-[1rem] text-[#3D3C3C] monsetb text-center">
+  ¿Estás seguro que deseas desactivar tu dispositivo?
+</div>
+<mat-dialog-actions class="mt-10" align="center">
+  <div class="flex justify-between space-x-4">
+    <div><button mat-button class="text-[#00AF91] w-[7.25rem] btn-entendido monsetb text-[0.844rem]" [mat-dialog-close]="false">Cancelar</button></div>
+    <div><button mat-button class="text-[#00AF91] w-[7.25rem] btn-entendido monsetb text-[0.844rem]" [mat-dialog-close]="true" cdkFocusInitial>Confirmar</button></div>
+  </div>
+</mat-dialog-actions>
