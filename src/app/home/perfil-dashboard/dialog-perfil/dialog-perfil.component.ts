@@ -16,7 +16,7 @@ export class DialogPerfilComponent implements OnInit {
   emailconf = new FormControl('', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-\\\\A-Z]+@[a-z0-9.-\\\\A-Z]+\\.[a-z\\\\A-Z]{2,4}$')])
 
   groupForm2!: FormGroup;
-  token = new FormControl('', [Validators.required])
+  token = new FormControl('', [Validators.required, Validators.maxLength(6), Validators.minLength(6)])
 
   constructor() { }
 

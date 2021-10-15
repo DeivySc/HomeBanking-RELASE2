@@ -14,3 +14,9 @@
 :host::ng-deep .mat-horizontal-stepper-header{
   pointer-events: none !important;
 }
+
+:host .mat-button-disabled.mat-button-disabled{
+  background: #BBEEE5;
+  //opacity: 0.2;
+  color: white;
+}

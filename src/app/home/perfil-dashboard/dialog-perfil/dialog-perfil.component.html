@@ -29,7 +29,7 @@
       <div class="text-center mx-auto text-[#8F8F8F]">Ingresa tu Token Digital</div>
       <div class="w-full flex justify-center">
         <mat-form-field appearance="outline" class="w-full">
-          <input matInput formControlName="token" type="password" autocomplete="false">
+          <input matInput maxlength="6" minlength="6" formControlName="token" type="password" autocomplete="false">
           <mat-icon class="text-[#00AF91]" *ngIf="token.value === '123456'" matSuffix>check_circle</mat-icon>
         </mat-form-field>
       </div>
