@@ -55,14 +55,13 @@ import { PasswordComponent } from './components/password/password.component';
         ReactiveFormsModule,
         MatDialogModule,
         IMaskModule,
-
         BrowserModule,
         FormsModule
     ],
     providers: [CurrencyPipe],
-  exports: [
-    ToolbarComponent,
-  ],
+    exports: [
+        ToolbarComponent,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

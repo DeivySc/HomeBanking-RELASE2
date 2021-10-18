@@ -119,11 +119,13 @@
                         </div>
                         <div style="letter-spacing: 0.0015em;" class="monsetb text-[1rem] text-[#1A3184]">Cuando la
                           cámara se encuentre habilitada, apunta tu teléfono hacia esta pantalla para escanear el código
-                          QR.</div>
-                        <div class="flex justify-center mt-10">
-                          <div *ngIf="spinner">
-                          <mat-spinner></mat-spinner>
+                          QR.
                         </div>
+                        <div class="flex justify-center mt-10">
+<!--                          <div *ngIf="spinner">-->
+<!--                            <mat-spinner></mat-spinner>-->
+<!--                          </div>-->
+                          <app-spinner *ngIf="spinner"></app-spinner>
                           <img *ngIf="!spinner" class="w-[11.875rem] h-[12.563rem]" (click)="showSpinner()" src="assets/images/qrcode_3199469_.png">
                         </div>
                       </div>

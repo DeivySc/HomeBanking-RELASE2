@@ -39,6 +39,7 @@ import { DialogPerfilComponent } from './perfil-dashboard/dialog-perfil/dialog-p
 import { DesactTokenComponent } from './desact-token/desact-token.component';
 import { DialogWarningComponent } from './desact-token/dialog-warning/dialog-warning.component';
 import {PasswordComponent} from "../components/password/password.component";
+import {SpinnerComponent} from "../components/spinner/spinner.component";
 
 
 
@@ -62,7 +63,8 @@ import {PasswordComponent} from "../components/password/password.component";
     DialogPerfilComponent,
     DesactTokenComponent,
     DialogWarningComponent,
-    PasswordComponent
+    PasswordComponent,
+    SpinnerComponent
   ],
     imports: [
         CommonModule,
@@ -88,7 +90,8 @@ import {PasswordComponent} from "../components/password/password.component";
         MatListModule,
         MatProgressSpinnerModule
     ],exports:[
-      PasswordComponent
+      PasswordComponent,
+      SpinnerComponent
   ],
   providers: [
     CurrencyPipe
