@@ -35,7 +35,7 @@ export class ActTokenComponent implements OnInit {
         this.qrScan = false;
         this.qrAutenticacion = true;
         this.qrActive = false;
-      }, 500000);
+      }, 3000);
     }
   }
 
